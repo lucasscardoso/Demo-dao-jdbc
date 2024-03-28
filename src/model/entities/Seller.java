@@ -8,7 +8,7 @@ public class Seller implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 	
-	private Integer Id;
+	private Integer id;
 	private String Name;
 	private String Email;
 	private Date BirthDate;
@@ -16,12 +16,12 @@ public class Seller implements Serializable{
 	
 	private Department department;
 	
-	private Seller() {
+	public Seller() {
 	}
 
 	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
 		
-		Id = id;
+		this.id = id;
 		Name = name;
 		Email = email;
 		BirthDate = birthDate;
@@ -29,12 +29,12 @@ public class Seller implements Serializable{
 		this.department = department;
 	}
 
-	public Integer getId() {
-		return Id;
+	public Integer getid() {
+		return id;
 	}
 
-	public void setId(Integer id) {
-		Id = id;
+	public void setid(Integer id) {
+		this.id = id;
 	}
 
 	public String getName() {
@@ -79,7 +79,7 @@ public class Seller implements Serializable{
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -91,13 +91,13 @@ public class Seller implements Serializable{
 		if (getClass() != obj.getClass())
 			return false;
 		Seller other = (Seller) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 
 	@Override
 	public String toString() {
-		return "Seller [Id=" + Id + ", Name=" + Name + ", Email=" + Email + ", BirthDate=" + BirthDate + ", BaseSalary="
-				+ BaseSalary + ", department=" + department + "]";
+		return "Seller [id= " + id + ", Name=" + Name + ", Email=" + Email + ", BirthDate=" + BirthDate + ", BaseSalary="
+				+ BaseSalary + ", department= " + department + "]";
 	}
 	
 	
