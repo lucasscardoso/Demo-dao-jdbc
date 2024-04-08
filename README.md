@@ -8,3 +8,4 @@
 
  JDK 17
  
+### O Projeto consiste em um crud onde podemos cadastrar,atualizar e deletar vendedores e departamentos.
